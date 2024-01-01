@@ -1,6 +1,3 @@
-const eventManager = require('./eventManager');
-const slashFetcher = require('./slashFetcher');
-
 const { 
     Client,
     GatewayIntentBits, 
@@ -50,7 +47,11 @@ client.interactions = new Map();
 
 client.register_arr = [];
 
+const eventManager = require('./eventManager');
+
 eventManager(client);
+
+const slashFetcher = require('./slashFetcher');
 
 slashFetcher(client);
 
