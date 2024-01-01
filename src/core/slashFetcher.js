@@ -16,9 +16,8 @@ function getSlashs(folderPath) {
 }
 
 module.exports = async (client) => {
-    const slash_commands = getSlashs(`${process.cwd()}/src/Slash`);
-    for (const command of slash_commands) {
-        const props = require(command);
+    for (const SlashCommand of getSlashs(`${process.cwd()}/src/Slash`)) {
+        const props = require(SlashCommand);
         client.interactions.set(props.name, { ...props });
         client.register_arr.push(props);
     }
