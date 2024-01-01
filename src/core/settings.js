@@ -1,4 +1,7 @@
-const { GatewayIntentBits, Partials } = require('discord.js');
+const { 
+    GatewayIntentBits, 
+    Partials 
+} = require('discord.js');
 
 module.exports = {
     Partials: [
