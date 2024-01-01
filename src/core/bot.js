@@ -1,4 +1,3 @@
-const settings = require('./settings');
 const eventManager = require('./eventManager');
 const slashFetcher = require('./slashFetcher');
 
