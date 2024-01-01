@@ -9,10 +9,12 @@ const client = new Client(
     {
         intents: settings.Intents,
         partials: settings.Partials,
-        ws: {properties: {
-            browser: 'Discord iOS'
+        ws: {
+            properties: {
+                browser: 'Discord iOS'
+            }
         }
-    }}
+    }
 );
 
 client.commands = new Map();
