@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-export default (client) => {
+module.exports = (client) => {
     const eventFiles = fs.readdirSync(`${__dirname}/../Events`).filter(file => file.endsWith('.js'));
     let i = 0;
     for (const file of eventFiles) {
