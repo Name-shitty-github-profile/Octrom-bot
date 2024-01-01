@@ -5,6 +5,5 @@ module.exports = async (client, commands) => {
     for (let command of commands) {
         await client.application.commands.create(command);
     }
-    console.log(`Created ${commands.length} commands!`);
-    console.log(`Commands synchronized!`);
+    console.log(`Created ${commands.length} commands!\nCommands Synchronized!`);
 };
