@@ -9,7 +9,7 @@ function getSlashs(folderPath) {
         if (fs.statSync(itemPath).isDirectory()) {
             files.push(...getSlashs(itemPath));
         } else {
-            files.push(itemPath.replace(/\.js$/, ''));
+            files.push(itemPath.replace(".js", ''));
         }
     }
     return files;
