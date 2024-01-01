@@ -9,6 +9,6 @@ export default (client) => {
         const eventName = file.split('.')[0];
         client.on(eventName, event.bind(null, client));
         i++;
-    };
+    }
     console.log(`Event : ${i} has been loaded!`);
 };
