@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 export default (client) => {
-    const eventFiles = fs.readdirSync(`${__dirname}/../Events`).filter(file => file.endsWith('.ts'));
+    const eventFiles = fs.readdirSync(`${__dirname}/../Events`).filter(file => file.endsWith('.js'));
     let i = 0;
     for (const file of eventFiles) {
         const event = require(`${__dirname}/../Events/${file}`);
