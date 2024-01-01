@@ -52,7 +52,7 @@ client.interactions = new Map();
 
 client.register_arr = [];
 
-eventManager(client),
+eventManager(client);
 
 slashFetcher(client);
 
