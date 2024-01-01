@@ -7,8 +7,6 @@ const {
     Partials
 } = require('discord.js');
 
-const { token } = require(`../../privates_files/config`);
-
 const client = new Client(
     {
         intents: [
@@ -55,5 +53,7 @@ client.register_arr = [];
 eventManager(client);
 
 slashFetcher(client);
+
+const { token } = require(`../../privates_files/config`);
 
 client.login(token);
