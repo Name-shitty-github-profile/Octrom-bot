@@ -1,6 +1,6 @@
-import { GatewayIntentBits, Partials } from 'discord.js';
+const { GatewayIntentBits, Partials } = require('discord.js');
 
-export default {
+module.exports = {
     Partials: [
         Partials.Channel,
         Partials.Reaction,
