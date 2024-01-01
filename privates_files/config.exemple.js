@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     token:  "Ur token",
     Languages: [
         {"English": "../src/languages/English.toml"}
