@@ -5,7 +5,7 @@ module.exports = (client) => {
     const eventFiles = fs.readdirSync(`${__dirname}/../Events`).filter(file => file.endsWith('.js'));
     for (const file of eventFiles) {
         /*
-        VARIABLES FOR FUNCTION (OPTIMIZED RAM USAGE) :
+        VARIABLES FOR client.on (OPTIMIZED RAM USAGE) :
         event = require(`${__dirname}/../Events/${file}`);
         eventName = file.replace(".js", "");
         */
