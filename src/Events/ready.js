@@ -1,5 +1,13 @@
 const slashSync = require('../core/slashsync');
 
+function Status(client) {
+    const possible_status = [
+        'Sarah Cooper',
+        "Lily"
+    ];
+    client.user.setPresence({ activities: [{ name: possible_status[Math.floor(Math.random() * possible_status.length)], type: ActivityType.Watching }] });
+}
+
 const { ApplicationCommandType, ActivityType } = require('discord.js');
 module.exports = async (client) => {
     await slashSync(client, client.register_arr.map((command) => ({
@@ -8,12 +16,7 @@ module.exports = async (client) => {
         options: command.options,
         type: ApplicationCommandType.ChatInput
     })));
-    function Status() {
-        const possible_status = [
-            'Sarah Cooper',
-            "Lily"
-        ];
-        client.user.setPresence({ activities: [{ name: possible_status[Math.floor(Math.random() * possible_status.length)], type: ActivityType.Watching }] });
-    }
-    setInterval(Status, 80_000);
+    setInterval(() => {
+        Status(client);
+    }, 80_000);
 };
