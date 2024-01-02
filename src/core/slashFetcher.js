@@ -3,8 +3,7 @@ const path = require('path');
 
 function getSlashs(folderPath) {
     let files = [];
-    const items = fs.readdirSync(folderPath);
-    for (const item of items) {
+    for (const item of fs.readdirSync(folderPath)) {
         const itemPath = path.join(folderPath, item);
         if (fs.statSync(itemPath).isDirectory()) {
             files.push(...getSlashs(itemPath));
