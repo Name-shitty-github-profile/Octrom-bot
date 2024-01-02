@@ -15,4 +15,4 @@ module.exports = async function(client, interaction) {
             console.log(e);
         }
     }
-};
+}
