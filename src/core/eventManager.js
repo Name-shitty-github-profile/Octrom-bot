@@ -8,5 +8,5 @@ module.exports = (client) => {
         const eventName = file.replace(".js", "");
         client.on(eventName, event.bind(null, client));
     }
-    console.log(`Event : ${eventFiles.length} has been loaded!`);
+    console.log(`${eventFiles.length} events has been loaded!`);
 };
