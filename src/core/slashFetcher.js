@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require('path');
 
-function getSlashs() {
-    const folderPath = `${process.cwd()}/src/Slash`;
+function getSlashs(folderPath) {
     let files = [];
     const items = fs.readdirSync(folderPath);
     for (const item of items) {
@@ -17,7 +16,7 @@ function getSlashs() {
 }
 
 module.exports = async (client) => {
-    for (const SlashCommand of getSlashs()) {
+    for (const SlashCommand of getSlashs(`${process.cwd()}/src/Slash`)) {
         const props = require(SlashCommand);
         client.interactions.set(props.name, { ...props });
         client.register_arr.push(props);
