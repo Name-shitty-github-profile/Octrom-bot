@@ -1,10 +1,12 @@
-module.exports = async (client, interaction) => {
+module.exports = async function(client, interaction) {
     if (!interaction.isCommand() || !interaction.guild.channels || interaction.user.bot) return;
     const command = client.interactions.get(interaction.commandName);
-    if (!command) return interaction.reply({ content: "Connection error.", ephemeral: true });
+    if (!command) {
+        interaction.reply({ content: "Connection error.", ephemeral: true });
+        return;
+    }
     try {
         await command.func(client, interaction);
-        e = Date.now();
     } catch (e) {
         try {
             console.log(e);
