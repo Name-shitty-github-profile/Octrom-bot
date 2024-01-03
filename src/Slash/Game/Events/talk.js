@@ -10,6 +10,6 @@ const Talks = {
 module.exports = {
     name: "talk",
     func: async function(client, interaction) {
-        await Talks[Math.floor(Math.random() *Talks.length)](client, interaction);
+        await Talks.normal.hometown[Math.floor(Math.random() *Talks.length)](client, interaction);
     }
 }
