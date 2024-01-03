@@ -1,4 +1,9 @@
-const Talks = require(`${process.cwd()}/utils/GetEventData`)("normal/hometown/talk");
+const GetEventData = require(`${process.cwd()}/utils/GetEventData`);
+
+const Talks = {
+    normal: {
+        Biurk: GetEventData("normal/Biurk/talk"),
+        hometown: GetEventData("normal/hometown/talk")
 
 module.exports = {
     name: "talk",
