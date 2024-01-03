@@ -4,6 +4,8 @@ const Talks = {
     normal: {
         Biurk: GetEventData("normal/Biurk/talk"),
         hometown: GetEventData("normal/hometown/talk")
+    }
+};
 
 module.exports = {
     name: "talk",
